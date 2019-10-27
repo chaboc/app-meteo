@@ -1,0 +1,7 @@
+{
+  "name": "France Meteo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
