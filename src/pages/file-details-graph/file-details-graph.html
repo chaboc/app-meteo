@@ -1,0 +1,18 @@
+<!--
+  Generated template for the FileDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ fileData.originalFilename }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <div *ngFor="let title of fileData.getUsableTitle()">
+    <app-file-details-graph-hourly *ngIf="fileData" [part]="title" [fileData]="fileData"></app-file-details-graph-hourly>
+  </div>
+</ion-content>
