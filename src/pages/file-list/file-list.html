@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      File list
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner *ngIf="loading == true" name="bubbles"></ion-spinner>
+  <ion-list *ngIf="loading == false">
+    <ion-item-sliding *ngFor="let file of listFiles">
+      <ion-item (click)="itemSelected(file)">
+        {{ file.name }}
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="deleteFile(file)">
+          <ion-icon name="remove-circle"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
