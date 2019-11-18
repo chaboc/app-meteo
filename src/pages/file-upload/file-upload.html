@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>File upload</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button *ngIf="loading == false" ion-button full (click)="chooseFile()">Choose a file</button>
+  <ion-spinner *ngIf="loading == true" name="bubbles"></ion-spinner>
+</ion-content>
